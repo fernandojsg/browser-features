@@ -1,0 +1,22 @@
+{
+  "name": "browser-features",
+  "version": "1.0.0",
+  "description": "Browser features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandojsg/browser-features.git"
+  },
+  "author": "Fernando Serrano <fernandojsg@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fernandojsg/browser-features/issues"
+  },
+  "homepage": "https://github.com/fernandojsg/browser-features#readme",
+  "dependencies": {
+    "useragent-info": "^1.0.0"
+  }
+}
