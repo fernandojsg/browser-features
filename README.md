@@ -15,33 +15,34 @@ And you should get a report similar to the following:
 ```json
 {
     "userAgent": {
-        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0",
         "productComponents": {
             "Mozilla": "5.0",
-            "AppleWebKit": "537.36 (KHTML, like Gecko)",
-            "Chrome": "68.0.3440.106",
-            "Safari": "537.36"
+            "Gecko": "20100101",
+            "Firefox": "62.0"
         },
         "platformInfo": [
             "Macintosh",
-            "Intel Mac OS X 10_13_5"
+            "Intel Mac OS X 10.13",
+            "rv:62.0"
         ],
         "bitness": 64,
         "arch": "Intel",
         "platform": "Mac",
         "os": "Mac OS",
-        "osVersion": "10.13.5",
-        "browserVendor": "Google",
-        "browserProduct": "Chrome",
-        "browserVersion": "68.0.3440.106",
+        "osVersion": "10.13",
+        "browserVendor": "Mozilla",
+        "browserProduct": "Firefox",
+        "browserVersion": "62.0",
         "formFactor": "Desktop"
     },
     "navigator": {
-        "appVersion": "5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+        "buildID": "20180830143136",
+        "appVersion": "5.0 (Macintosh)",
+        "oscpu": "Intel Mac OS X 10.13",
         "platform": "MacIntel",
-        "vendor": "Google Inc.",
         "product": "Gecko",
-        "productSub": "20030107",
+        "productSub": "20100101",
         "language": "en-US",
         "appCodeName": "Mozilla",
         "appName": "Netscape"
@@ -62,7 +63,7 @@ And you should get a report similar to the following:
         "Pointer Lock": true,
         "Fullscreen API": true,
         "Blob": true,
-        "SharedArrayBuffer": true,
+        "SharedArrayBuffer": false,
         "navigator.hardwareConcurrency": true,
         "SIMD.js": false,
         "Web Workers": true,
@@ -77,11 +78,11 @@ And you should get a report similar to the following:
         "Vibration API": true,
         "Screen Orientation API": true,
         "Geolocation API": true,
-        "Battery Status API": true,
+        "Battery Status API": false,
         "WebVR": false,
         "WebXR": false,
         "OffscreenCanvas": false,
-        "WebComponents": true,
+        "WebComponents": false,
         "WebGL1": true,
         "WebGL2": true
     },
