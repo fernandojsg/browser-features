@@ -29,34 +29,34 @@ export default function browserFeatureTest(successCallback) {
     else apis[apiname] = false;
   }
 
-  setApiSupport('Math.imul()', typeof Math.imul !== 'undefined');
-  setApiSupport('Math.fround()', typeof Math.fround !== 'undefined');
-  setApiSupport('ArrayBuffer.transfer()', typeof ArrayBuffer.transfer !== 'undefined');
-  setApiSupport('Web Audio', typeof AudioContext !== 'undefined' || typeof webkitAudioContext !== 'undefined');
-  setApiSupport('Pointer Lock', document.body.requestPointerLock || document.body.mozRequestPointerLock || document.body.webkitRequestPointerLock || document.body.msRequestPointerLock);
-  setApiSupport('Fullscreen API', document.body.requestFullscreen || document.body.msRequestFullscreen || document.body.mozRequestFullScreen || document.body.webkitRequestFullscreen);
+  setApiSupport('Math_imul', typeof Math.imul !== 'undefined');
+  setApiSupport('Math_fround', typeof Math.fround !== 'undefined');  
+  setApiSupport('ArrayBuffer_transfer', typeof ArrayBuffer.transfer !== 'undefined');
+  setApiSupport('WebAudio', typeof AudioContext !== 'undefined' || typeof webkitAudioContext !== 'undefined');
+  setApiSupport('PointerLock', document.body.requestPointerLock || document.body.mozRequestPointerLock || document.body.webkitRequestPointerLock || document.body.msRequestPointerLock);
+  setApiSupport('FullscreenAPI', document.body.requestFullscreen || document.body.msRequestFullscreen || document.body.mozRequestFullScreen || document.body.webkitRequestFullscreen);
   var hasBlobConstructor = false;
   try { new Blob(); hasBlobConstructor = true; } catch(e) { }
   setApiSupport('Blob', hasBlobConstructor);
   if (!hasBlobConstructor) setApiSupport('BlobBuilder', typeof BlobBuilder !== 'undefined' || typeof MozBlobBuilder !== 'undefined' || typeof WebKitBlobBuilder !== 'undefined');
   setApiSupport('SharedArrayBuffer', typeof SharedArrayBuffer !== 'undefined');
   setApiSupport('navigator.hardwareConcurrency', typeof navigator.hardwareConcurrency !== 'undefined');
-  setApiSupport('SIMD.js', typeof SIMD !== 'undefined');
-  setApiSupport('Web Workers', typeof Worker !== 'undefined');
+  setApiSupport('SIMDjs', typeof SIMD !== 'undefined');
+  setApiSupport('WebWorkers', typeof Worker !== 'undefined');
   setApiSupport('WebAssembly', typeof WebAssembly !== 'undefined');
-  setApiSupport('Gamepad API', navigator.getGamepads || navigator.webkitGetGamepads);
+  setApiSupport('GamepadAPI', navigator.getGamepads || navigator.webkitGetGamepads);
   var hasIndexedDB = false;
   try { hasIndexedDB = typeof indexedDB !== 'undefined'; } catch (e) {}
   setApiSupport('IndexedDB', hasIndexedDB);
-  setApiSupport('Visibility API', typeof document.visibilityState !== 'undefined' || typeof document.hidden !== 'undefined');
-  setApiSupport('requestAnimationFrame()', typeof requestAnimationFrame !== 'undefined');
-  setApiSupport('performance.now()', typeof performance !== 'undefined' && performance.now);
+  setApiSupport('VisibilityAPI', typeof document.visibilityState !== 'undefined' || typeof document.hidden !== 'undefined');
+  setApiSupport('requestAnimationFrame', typeof requestAnimationFrame !== 'undefined');
+  setApiSupport('performance_now', typeof performance !== 'undefined' && performance.now);
   setApiSupport('WebSockets', typeof WebSocket !== 'undefined');
   setApiSupport('WebRTC', typeof RTCPeerConnection !== 'undefined' || typeof mozRTCPeerConnection !== 'undefined' || typeof webkitRTCPeerConnection !== 'undefined' || typeof msRTCPeerConnection !== 'undefined');
-  setApiSupport('Vibration API', navigator.vibrate);
-  setApiSupport('Screen Orientation API', window.screen && (window.screen.orientation || window.screen.mozOrientation || window.screen.webkitOrientation || window.screen.msOrientation));
-  setApiSupport('Geolocation API', navigator.geolocation);
-  setApiSupport('Battery Status API', navigator.getBattery);
+  setApiSupport('VibrationAPI', navigator.vibrate);
+  setApiSupport('ScreenOrientationAPI', window.screen && (window.screen.orientation || window.screen.mozOrientation || window.screen.webkitOrientation || window.screen.msOrientation));
+  setApiSupport('GeolocationAPI', navigator.geolocation);
+  setApiSupport('BatteryStatusAPI', navigator.getBattery);
   setApiSupport('WebAssembly', typeof WebAssembly !== 'undefined');
   setApiSupport('WebVR', typeof navigator.getVRDisplays !== 'undefined');
   setApiSupport('WebXR', typeof navigator.xr !== 'undefined');
