@@ -1,7 +1,9 @@
 # browser-features
+
 Browser features
 
-# Usage
+## Usage
+
 ```sh
 npm install browser-features
 ```
@@ -12,6 +14,7 @@ browserFeatures(features => console.log(features));
 ```
 
 And you should get a report similar to the following:
+
 ```json
 {
     "userAgent": {
